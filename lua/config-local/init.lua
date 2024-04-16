@@ -85,14 +85,14 @@ function M.lookup()
   local config = M.config
   local files = config.config_files
   for _, filename in ipairs(files) do
-    filename = findfile(filename, ".")
+    filename = findfile(filename, vim.fn.getcwd())
     if filename ~= "" then
       return vim.fn.fnamemodify(filename, ":p")
     end
   end
   if config.lookup_parents then
     for _, filename in ipairs(files) do
-      filename = findfile(filename, ";.")
+      filename = findfile(filename, ";" .. vim.fn.getcwd())
       if filename ~= "" then
         return vim.fn.fnamemodify(filename, ":p")
       end
