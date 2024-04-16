@@ -1,3 +1,5 @@
+I just changed 2 lines for "nvim ." command to work because for some reason findfile didn't understand where it was during initialization
+
 <img src="https://neovim.io/logos/neovim-mark-flat.png" align="right" width="144" />
 
 # nvim-config-local 2.1.0
